@@ -1,20 +1,14 @@
 import 'package:auth_screens/src/core/style/size_app.dart';
 import 'package:auth_screens/src/core/widget/border_text_field.dart';
+import 'package:auth_screens/src/feature/auth/model/model_auth.dart';
 import 'package:flutter/material.dart';
 
-class TextFormFild extends StatelessWidget {
-  const TextFormFild(
+class TextFormFildAuth extends StatelessWidget {
+  const TextFormFildAuth(
       {super.key,
-      required this.controller,
-      required this.lable,
-      required this.hint,
-      required this.prefix, this.validator,});
+      required this.authModle,});
 
-  final TextEditingController controller;
-  final String lable;
-  final String hint;
-  final IconData prefix;
-  final String? Function(String?)? validator;
+  final AuthModle authModle;
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +16,17 @@ class TextFormFild extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: TextFormField(
         autovalidateMode: AutovalidateMode.onUserInteraction,
-        validator: validator,
-        controller: controller,
+        validator: authModle.validator,
+        controller: authModle.controller,
         decoration: InputDecoration(
           fillColor: Colors.white,
           filled: true,
-          label: Text(lable,style: const TextStyle(fontSize: SizeApp.s15),),
-          hintText: hint,
-          prefixIcon: Icon(prefix),
+          label: Text(authModle.lable,style: const TextStyle(fontSize: SizeApp.s15),),
+          hintText: authModle.hint,
+          prefixIcon: Icon(authModle.prefix),
           suffix: InkWell(
               onTap: () {
-                controller.clear();
+                authModle.controller.clear();
               },
               child: const Icon(
                 Icons.highlight_remove,
