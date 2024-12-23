@@ -1,0 +1,29 @@
+class StringApp {
+  static const String logInTitle = "Login";
+  static const String signUpTitle = "Create an account";
+  static const String forgotPasswordTitle = "Forgot your Password?";
+  static const String signInButtonText = "LOGIN";
+  static const String registerButtonText = "Register";
+  static const String nameInputLabel = "Name";
+  static const String pEYN = 'please enter your name';
+  static const String eYN = "Enter your name";
+  static const String nationalIdInputLabel = "National ID";
+  static const String pEYNID = 'please enter your National ID';
+  static const String eYNID = "Enter your National ID";
+  static const String nationalIDError = 'phone number should be 14 digits';
+  static const String phoneNumberInputLabel = "Phone Number";
+  static const String pEYPN = 'please enter your phone number';
+  static const String eYPN = "Enter your phone number";
+  static const String phoneError = 'phone number should be 11 digits';
+  static const String emailInputLabel = "Email";
+  static const String pEYEA = 'please enter your email address';
+  static const String eYEA = "Enter your email address";
+  static const String invalidEmailError = 'Invalid email address.';
+  static const String passwordInputLabel = "Password";
+  static const String confirmPasswordInputLabel = "Confirm Password";
+  static const String pEYP = 'please enter your password';
+  static const String eYP = "Enter your password";
+  static const String passwordLengthError = "Password must be at least 6 characters long.";
+  static const String signInWSocial = "Or login with social account";
+  static const String alreadyHaveAnAccount = "Already have an account?";
+}
